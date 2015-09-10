@@ -1,3 +1,32 @@
 <template name="homeIndex">
-    <h1>Welcome to ROCK</h1>
+    <div class="container">
+        <h1>Welcome to ROCK</h1>
+
+        <div class="row">
+            <div class="col-md-4">
+                <div class="panel panel-default">
+                    <div class="panel-heading">
+                        <h3 class="panel-title">
+                            Lista curenta</h3>
+                    </div>
+                    <ul class="list-group">
+                        {{#each currentQueue}}
+                            <li class="list-group-item">
+                                <span class="glyphicon glyphicon-headphones"></span>
+                                {{artist}} - {{name}}
+                                <div class="pull-right">
+                                    <button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-thumbs-up"></span>
+                                    </button>
+                                    <button type="button" class="btn btn-default btn-sm">
+                                        <span class="glyphicon glyphicon-thumbs-down"></span>
+                                    </button>
+                                </div>
+                            </li>
+                        {{/each}}
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
 </template>
